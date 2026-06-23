@@ -1,8 +1,7 @@
-const signup = async (req, res) => {
-  res.status(200).json({
-    status: 'Successful',
-    data: 'Works!!!',
-  });
-};
+import { sendSuccessRes } from '../utils/responseHandler.js';
+import User from './../models/userModel.js';
 
-export default { signup };
+import catchAsync from '../utils/catchAsync.js';
+
+const getAllUsers = (req, res) => {};
+export default { getAllUsers };
