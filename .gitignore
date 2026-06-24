@@ -1,0 +1,27 @@
+# Environment files
+.env
+.env.*
+*.env
+*.env.*
+config.env
+
+# Dependencies
+node_modules/
+
+# Test files and coverage
+test/
+tests/
+__tests__/
+coverage/
+*.test.js
+*.test.cjs
+*.test.mjs
+*.test.jsx
+*.test.ts
+*.test.tsx
+*.spec.js
+*.spec.cjs
+*.spec.mjs
+*.spec.jsx
+*.spec.ts
+*.spec.tsx
