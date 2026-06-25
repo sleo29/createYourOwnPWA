@@ -2,6 +2,8 @@ import { sendSuccessRes } from '../utils/responseHandler.js';
 import User from './../models/userModel.js';
 import jwt from 'jsonwebtoken';
 import catchAsync from '../utils/catchAsync.js';
+import AppError from '../utils/appError.js';
+import bcrypt from 'bcryptjs';
 
 const signToken = (id) => {
   return jwt.sign({ id: id }, process.env.JWT_SECRET, {
@@ -35,7 +37,15 @@ const signup = catchAsync(async (req, res) => {
   });
   createTokenAndSendRes(res, 200, user);
 });
-const login = (req, res) => {};
+const login = catchAsync(async (req, res) => {
+  const { email, password } = req.body;
+  if (!email || !password)
+    throw new AppError('Email or password missing!', 400);
+  const user = await User.findOne({ email }).select('+password');
+  if (!user || !(await bcrypt.compare(password, user.password)))
+    throw new AppError('Invalid credentials, Please try again!', 401);
+  createTokenAndSendRes(res, 200, user);
+});
 const forgotPassword = (req, res) => {};
 const updateMyPassword = (req, res) => {};
 const protect = (req, res) => {};
