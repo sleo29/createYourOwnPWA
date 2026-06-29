@@ -5,7 +5,7 @@ export const sendSuccessRes = (
   return res.status(statusCode).json({
     status,
     message,
-    data: { data },
+    data,
   });
 };
 
