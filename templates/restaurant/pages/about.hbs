@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="{{themeColor}}">
+  <title>About | {{restaurantName}}</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">{{restaurantName}}</a>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/about.html" aria-current="page">About</a>
+        <a href="/menu.html">Menu</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container prose">
+      <p class="eyebrow">Our Story</p>
+      <h1>About {{restaurantName}}</h1>
+      <p>{{description}}</p>
+      <p>We focus on local ingredients, a welcoming dining room, and a mobile-first ordering experience powered by your PWA creator.</p>
+
+      <div class="info-grid">
+        <article class="card">
+          <h2>Visit Us</h2>
+          <p>{{address}}</p>
+        </article>
+        <article class="card">
+          <h2>Hours</h2>
+          <p class="multiline">{{hours}}</p>
+        </article>
+        <article class="card">
+          <h2>Contact</h2>
+          <p><a href="tel:{{phone}}">{{phone}}</a></p>
+          <p><a href="mailto:{{email}}">{{email}}</a></p>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>{{restaurantName}} • {{tagline}}</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/app.js"></script>
+</body>
+</html>
