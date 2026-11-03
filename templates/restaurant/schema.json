@@ -1,0 +1,191 @@
+{
+  "title": "Restaurant Template Schema",
+  "description": "Sample form fields for generating a restaurant PWA.",
+  "fields": [
+    {
+      "name": "restaurantName",
+      "label": "Restaurant Name",
+      "type": "text",
+      "required": true,
+      "default": "Harvest Table"
+    },
+    {
+      "name": "tagline",
+      "label": "Tagline",
+      "type": "text",
+      "required": true,
+      "default": "Seasonal dishes. Warm service. Fast ordering."
+    },
+    {
+      "name": "description",
+      "label": "Short Description",
+      "type": "textarea",
+      "required": true,
+      "default": "A neighborhood restaurant serving fresh, locally inspired meals."
+    },
+    {
+      "name": "phone",
+      "label": "Phone Number",
+      "type": "text",
+      "required": true,
+      "default": "+1 (555) 123-4567"
+    },
+    {
+      "name": "email",
+      "label": "Email",
+      "type": "email",
+      "required": true,
+      "default": "hello@harvesttable.com"
+    },
+    {
+      "name": "address",
+      "label": "Address",
+      "type": "text",
+      "required": true,
+      "default": "125 Market Street, Portland, OR"
+    },
+    {
+      "name": "hours",
+      "label": "Opening Hours",
+      "type": "textarea",
+      "required": true,
+      "default": "Mon-Fri: 11am-10pm\nSat-Sun: 9am-11pm"
+    },
+    {
+      "name": "themeColor",
+      "label": "Theme Color",
+      "type": "color",
+      "required": true,
+      "default": "#a33a2b"
+    },
+    {
+      "name": "backgroundColor",
+      "label": "Background Color",
+      "type": "color",
+      "required": true,
+      "default": "#f8f1e7"
+    },
+    {
+      "name": "heroImage",
+      "label": "Hero Image Path",
+      "type": "text",
+      "required": true,
+      "default": "assets/images/hero.jpg"
+    },
+    {
+      "name": "featuredDishes",
+      "label": "Featured Dishes",
+      "type": "array",
+      "itemLabel": "Dish",
+      "fields": [
+        {
+          "name": "name",
+          "label": "Dish Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "label": "Dish Description",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "price",
+          "label": "Dish Price",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "default": [
+        {
+          "name": "Wood-Fired Flatbread",
+          "description": "Charred seasonal vegetables, ricotta, and basil oil.",
+          "price": "$14"
+        },
+        {
+          "name": "Braised Short Rib",
+          "description": "Slow-cooked beef with creamy polenta and roasted carrots.",
+          "price": "$28"
+        },
+        {
+          "name": "Citrus Tart",
+          "description": "A bright dessert with vanilla cream and candied peel.",
+          "price": "$9"
+        }
+      ]
+    },
+    {
+      "name": "menuSections",
+      "label": "Menu Sections",
+      "type": "array",
+      "itemLabel": "Section",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Section Title",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "items",
+          "label": "Items",
+          "type": "array",
+          "itemLabel": "Menu Item",
+          "fields": [
+            {
+              "name": "name",
+              "label": "Item Name",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "description",
+              "label": "Item Description",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "price",
+              "label": "Price",
+              "type": "text",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "default": [
+        {
+          "title": "Starters",
+          "items": [
+            {
+              "name": "Tomato Bisque",
+              "description": "Slow-roasted tomatoes, cream, basil.",
+              "price": "$8"
+            },
+            {
+              "name": "Crispy Calamari",
+              "description": "Lemon aioli, herbs, sea salt.",
+              "price": "$12"
+            }
+          ]
+        },
+        {
+          "title": "Mains",
+          "items": [
+            {
+              "name": "Grilled Salmon",
+              "description": "Herbed rice, grilled greens, lemon butter.",
+              "price": "$24"
+            },
+            {
+              "name": "Mushroom Risotto",
+              "description": "Arborio rice, parmesan, truffle oil.",
+              "price": "$19"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

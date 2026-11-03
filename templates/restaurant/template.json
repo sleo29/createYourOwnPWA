@@ -1,0 +1,16 @@
+{
+  "id": "restaurant",
+  "name": "Restaurant PWA",
+  "description": "A sample progressive web app template for restaurants with home, about, and menu pages.",
+  "version": "1.0.0",
+  "category": "food",
+  "pages": [
+    "index",
+    "about",
+    "menu"
+  ],
+  "entryPage": "index",
+  "schema": "schema.json",
+  "manifest": "manifest.template.json",
+  "serviceWorker": "sw.template.js"
+}

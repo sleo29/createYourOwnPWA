@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="{{themeColor}}">
+  <title>{{restaurantName}}</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">{{restaurantName}}</a>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/menu.html">Menu</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Restaurant PWA</p>
+          <h1>{{restaurantName}}</h1>
+          <p class="lead">{{tagline}}</p>
+          <p>{{description}}</p>
+          <div class="actions">
+            <a class="button" href="/menu.html">View Menu</a>
+            <a class="button button-secondary" href="tel:{{phone}}">Call Now</a>
+          </div>
+        </div>
+        <div>
+          <img class="hero-image" src="/{{heroImage}}" alt="{{restaurantName}} signature dishes">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Featured Dishes</h2>
+        <div class="card-grid">
+          {{#each featuredDishes}}
+          <article class="card">
+            <h3>{{name}}</h3>
+            <p>{{description}}</p>
+            <strong>{{price}}</strong>
+          </article>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>{{restaurantName}} • {{address}} • {{phone}}</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/app.js"></script>
+</body>
+</html>

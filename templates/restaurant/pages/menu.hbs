@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="{{themeColor}}">
+  <title>Menu | {{restaurantName}}</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">{{restaurantName}}</a>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/menu.html" aria-current="page">Menu</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <p class="eyebrow">Chef's Menu</p>
+      <h1>Menu</h1>
+      {{#each menuSections}}
+      <section class="menu-section">
+        <h2>{{title}}</h2>
+        <div class="menu-list">
+          {{#each items}}
+          <article class="menu-item">
+            <div>
+              <h3>{{name}}</h3>
+              <p>{{description}}</p>
+            </div>
+            <strong>{{price}}</strong>
+          </article>
+          {{/each}}
+        </div>
+      </section>
+      {{/each}}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Order ahead, save to home screen, and browse offline.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/app.js"></script>
+</body>
+</html>
