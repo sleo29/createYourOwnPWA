@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
+  <rect width="640" height="400" fill="#f3f4fa" />
+  <rect
+    x="38"
+    y="34"
+    width="564"
+    height="332"
+    rx="18"
+    fill="#fff"
+    stroke="#e4e6ef"
+  />
+  <rect x="38" y="34" width="142" height="332" rx="18" fill="#fbfbfd" />
+  <rect
+    x="38"
+    y="34"
+    width="142"
+    height="332"
+    rx="18"
+    fill="none"
+    stroke="#e4e6ef"
+  />
+  <rect x="57" y="58" width="24" height="24" rx="7" fill="#635bff" />
+  <rect x="91" y="62" width="65" height="6" rx="3" fill="#434657" />
+  <rect x="91" y="73" width="46" height="4" rx="2" fill="#b3b6c1" />
+  <rect x="54" y="113" width="110" height="26" rx="6" fill="#eeedff" />
+  <rect x="62" y="122" width="6" height="7" rx="2" fill="#635bff" />
+  <rect x="75" y="122" width="54" height="6" rx="3" fill="#635bff" />
+  <rect x="60" y="155" width="70" height="6" rx="3" fill="#c8cad3" />
+  <rect x="60" y="184" width="64" height="6" rx="3" fill="#c8cad3" />
+  <rect x="60" y="213" width="73" height="6" rx="3" fill="#c8cad3" />
+  <rect x="210" y="64" width="150" height="12" rx="6" fill="#343746" />
+  <rect x="210" y="84" width="223" height="7" rx="3" fill="#c5c7d0" />
+  <rect
+    x="210"
+    y="119"
+    width="116"
+    height="64"
+    rx="9"
+    fill="#fff"
+    stroke="#e5e6ed"
+  />
+  <rect
+    x="339"
+    y="119"
+    width="116"
+    height="64"
+    rx="9"
+    fill="#fff"
+    stroke="#e5e6ed"
+  />
+  <rect
+    x="468"
+    y="119"
+    width="112"
+    height="64"
+    rx="9"
+    fill="#fff"
+    stroke="#e5e6ed"
+  />
+  <rect x="222" y="131" width="54" height="5" rx="2" fill="#b6b9c4" />
+  <rect x="222" y="145" width="45" height="15" rx="4" fill="#353847" />
+  <rect x="351" y="131" width="54" height="5" rx="2" fill="#b6b9c4" />
+  <rect x="351" y="145" width="35" height="15" rx="4" fill="#353847" />
+  <rect x="480" y="131" width="54" height="5" rx="2" fill="#b6b9c4" />
+  <rect x="480" y="145" width="42" height="15" rx="4" fill="#353847" />
+  <rect
+    x="210"
+    y="205"
+    width="370"
+    height="130"
+    rx="9"
+    fill="#fff"
+    stroke="#e5e6ed"
+  />
+  <path
+    d="M248 303v-25h20v25zm49 0v-47h20v47zm49 0v-35h20v35zm49 0v-66h20v66zm49 0v-42h20v42zm49 0v-82h20v82z"
+    fill="#635bff"
+  />
+</svg>

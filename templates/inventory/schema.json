@@ -1,0 +1,71 @@
+{
+  "title": "Inventory PWA Configuration",
+  "description": "Business identity and appearance values injected into the generated application.",
+  "fields": [
+    {
+      "name": "appName",
+      "label": "Application Name",
+      "type": "text",
+      "default": "Inventory",
+      "required": true
+    },
+    {
+      "name": "businessName",
+      "label": "Business Name",
+      "type": "text",
+      "default": "Sample Business",
+      "required": true
+    },
+    {
+      "name": "primaryColor",
+      "label": "Primary Theme Color",
+      "type": "color",
+      "default": "#635bff",
+      "required": true
+    },
+    {
+      "name": "currency",
+      "label": "Currency",
+      "type": "select",
+      "default": "USD",
+      "required": true,
+      "options": [
+        { "label": "US Dollar (USD)", "value": "USD" },
+        { "label": "Euro (EUR)", "value": "EUR" },
+        { "label": "British Pound (GBP)", "value": "GBP" },
+        { "label": "Canadian Dollar (CAD)", "value": "CAD" },
+        { "label": "Australian Dollar (AUD)", "value": "AUD" },
+        { "label": "Japanese Yen (JPY)", "value": "JPY" },
+        { "label": "Indian Rupee (INR)", "value": "INR" }
+      ]
+    },
+    {
+      "name": "businessLogo",
+      "label": "Business Logo URL or Relative Path",
+      "type": "text",
+      "default": "",
+      "required": false
+    },
+    {
+      "name": "businessEmail",
+      "label": "Business Email",
+      "type": "email",
+      "default": "",
+      "required": false
+    },
+    {
+      "name": "businessPhone",
+      "label": "Business Phone",
+      "type": "tel",
+      "default": "",
+      "required": false
+    },
+    {
+      "name": "businessAddress",
+      "label": "Business Address",
+      "type": "textarea",
+      "default": "",
+      "required": false
+    }
+  ]
+}

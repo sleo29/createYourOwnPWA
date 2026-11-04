@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>{{> head}}</head>
+<body data-page="products" data-business-name="{{businessName}}" data-app-name="{{appName}}" data-currency="{{currency}}" data-primary-color="{{primaryColor}}" data-business-logo="{{businessLogo}}">
+  <div class="app-shell">
+    {{> sidebar}}
+    <div class="workspace">
+      {{> header}}
+      <main class="page-content">
+        <section class="page-heading">
+          <div><p class="eyebrow">CATALOG</p><h1>Products</h1><p class="page-description">Manage product details, pricing, and stock thresholds.</p></div>
+          <button class="button button-primary" type="button" data-open-product>＋ Add product</button>
+        </section>
+        <section class="panel table-panel">
+          <div class="table-toolbar">
+            <div class="toolbar-search"><span aria-hidden="true">⌕</span><input id="product-search" type="search" placeholder="Search name, SKU or barcode" aria-label="Search products"></div>
+            <div class="toolbar-filters">
+              <select id="category-filter" aria-label="Filter by category"><option value="">All categories</option></select>
+              <select id="stock-filter" aria-label="Filter by stock status"><option value="">All stock levels</option><option value="low">Low stock</option><option value="in-stock">In stock</option><option value="out">Out of stock</option></select>
+              <select id="product-sort" aria-label="Sort products"><option value="name">Name A–Z</option><option value="name-desc">Name Z–A</option><option value="quantity">Quantity: low to high</option><option value="value">Value: high to low</option></select>
+            </div>
+          </div>
+          <div class="table-wrap"><table><thead><tr><th>Product</th><th>SKU / Barcode</th><th>Category</th><th>Purchase price</th><th>Selling price</th><th>Quantity</th><th>Stock status</th><th><span class="sr-only">Actions</span></th></tr></thead><tbody id="products-table"><tr><td colspan="8"><div class="loading-state">Loading products…</div></td></tr></tbody></table></div>
+          <div class="table-footer"><span id="product-count">Loading…</span><button class="button button-quiet button-small" type="button" id="clear-product-filters">Clear filters</button></div>
+        </section>
+      </main>
+      {{> footer pageScript="products"}}
+    </div>
+  </div>
+  {{> modals/product}}
+  <div class="sidebar-backdrop" data-sidebar-close></div>
+</body>
+</html>

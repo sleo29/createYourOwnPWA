@@ -1,0 +1,12 @@
+<dialog class="modal modal-compact" id="category-modal" aria-labelledby="category-modal-title">
+  <form class="modal-form" id="category-form">
+    <div class="modal-heading">
+      <div><p class="eyebrow">Organize inventory</p><h2 id="category-modal-title">Add category</h2></div>
+      <button class="icon-button" type="button" aria-label="Close dialog" data-close-dialog>×</button>
+    </div>
+    <input type="hidden" name="id">
+    <label class="field">Category name <span class="required">*</span><input name="name" required maxlength="80" autocomplete="off"></label>
+    <label class="field">Description<textarea name="description" rows="3" maxlength="240"></textarea></label>
+    <div class="modal-actions"><button class="button button-quiet" type="button" data-close-dialog>Cancel</button><button class="button button-primary" type="submit">Save category</button></div>
+  </form>
+</dialog>
