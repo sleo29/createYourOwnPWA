@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="{{primaryColor}}" />
+  <path
+    d="M126 128h260v48H126zm0 104h260v48H126zm0 104h176v48H126z"
+    fill="#fff"
+  />
+  <path
+    d="M80 104h36v36H80zm0 104h36v36H80zm0 104h36v36H80z"
+    fill="#fff"
+    opacity=".72"
+  />
+</svg>

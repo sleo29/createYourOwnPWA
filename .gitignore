@@ -8,6 +8,9 @@ config.env
 # Dependencies
 node_modules/
 
+# Generated template demos
+templates/*/demo-dist/
+
 # Test files and coverage
 test/
 tests/

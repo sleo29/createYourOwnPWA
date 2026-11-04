@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>{{> head}}</head>
+<body data-page="reports" data-business-name="{{businessName}}" data-app-name="{{appName}}" data-currency="{{currency}}" data-primary-color="{{primaryColor}}" data-business-logo="{{businessLogo}}">
+  <div class="app-shell">
+    {{> sidebar}}
+    <div class="workspace">
+      {{> header}}
+      <main class="page-content">
+        <section class="page-heading">
+          <div><p class="eyebrow">INSIGHTS</p><h1>Reports</h1><p class="page-description">Understand inventory value, replenishment needs, and stock activity.</p></div>
+          <button class="button button-secondary" type="button" data-export-report>↓ Export report</button>
+        </section>
+        <section class="report-summary-grid">
+          <article class="report-summary-card"><span>Inventory valuation</span><strong id="report-valuation">—</strong><small>Purchase cost of current stock</small></article>
+          <article class="report-summary-card"><span>Potential sales value</span><strong id="report-sales-value">—</strong><small>Selling price of current stock</small></article>
+          <article class="report-summary-card"><span>Products to replenish</span><strong id="report-low-count">—</strong><small>At or below minimum quantity</small></article>
+        </section>
+        <section class="panel table-panel report-section" id="low-stock">
+          <div class="panel-heading panel-heading-padded"><div><h2>Low-stock report</h2><p>Products that need replenishment</p></div><span class="badge badge-warning" id="low-stock-badge">— items</span></div>
+          <div class="table-wrap"><table><thead><tr><th>Product</th><th>SKU</th><th>Category</th><th>On hand</th><th>Minimum</th><th>Suggested reorder</th></tr></thead><tbody id="low-stock-report"><tr><td colspan="6"><div class="loading-state">Loading report…</div></td></tr></tbody></table></div>
+        </section>
+        <section class="panel table-panel report-section">
+          <div class="panel-heading panel-heading-padded"><div><h2>Inventory valuation</h2><p>Current quantity valued at purchase cost</p></div></div>
+          <div class="table-wrap"><table><thead><tr><th>Product</th><th>SKU</th><th>Category</th><th>Quantity</th><th>Purchase price</th><th>Total value</th></tr></thead><tbody id="valuation-report"><tr><td colspan="6"><div class="loading-state">Loading report…</div></td></tr></tbody></table></div>
+        </section>
+        <section class="panel table-panel report-section">
+          <div class="panel-heading panel-heading-padded"><div><h2>Stock movement report</h2><p>Recent activity across all products</p></div><a class="text-link" href="/stock.html">Manage stock <span aria-hidden="true">→</span></a></div>
+          <div class="table-wrap"><table><thead><tr><th>Date</th><th>Product</th><th>Type</th><th>Quantity change</th><th>Notes</th></tr></thead><tbody id="movement-report"><tr><td colspan="5"><div class="loading-state">Loading report…</div></td></tr></tbody></table></div>
+        </section>
+      </main>
+      {{> footer pageScript="reports"}}
+    </div>
+  </div>
+  <div class="sidebar-backdrop" data-sidebar-close></div>
+</body>
+</html>

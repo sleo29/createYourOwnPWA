@@ -1,0 +1,19 @@
+<dialog class="modal modal-compact" id="movement-modal" aria-labelledby="movement-modal-title">
+  <form class="modal-form" id="movement-form">
+    <div class="modal-heading">
+      <div><p class="eyebrow">Record inventory change</p><h2 id="movement-modal-title">New stock movement</h2></div>
+      <button class="icon-button" type="button" aria-label="Close dialog" data-close-dialog>×</button>
+    </div>
+    <label class="field">Product <span class="required">*</span><select name="productId" required></select></label>
+    <label class="field">Movement type <span class="required">*</span>
+      <select name="type" required>
+        <option value="in">Stock in</option><option value="out">Stock out</option><option value="adjustment">Adjustment</option>
+      </select>
+    </label>
+    <label class="field"><span data-quantity-label>Quantity</span> <span class="required">*</span><input name="quantity" type="number" min="1" step="1" required value="1"></label>
+    <p class="field-hint" data-adjustment-hint hidden>For adjustments, enter the signed change (for example, -2 or 5).</p>
+    <label class="field">Movement date <span class="required">*</span><input name="date" type="date" required></label>
+    <label class="field">Notes<textarea name="notes" rows="3" maxlength="300" placeholder="Optional reason or reference"></textarea></label>
+    <div class="modal-actions"><button class="button button-quiet" type="button" data-close-dialog>Cancel</button><button class="button button-primary" type="submit">Save movement</button></div>
+  </form>
+</dialog>

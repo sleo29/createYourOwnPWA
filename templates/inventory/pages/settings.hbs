@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>{{> head}}</head>
+<body data-page="settings" data-business-name="{{businessName}}" data-app-name="{{appName}}" data-currency="{{currency}}" data-primary-color="{{primaryColor}}" data-business-logo="{{businessLogo}}">
+  <div class="app-shell">
+    {{> sidebar}}
+    <div class="workspace">
+      {{> header}}
+      <main class="page-content">
+        <section class="page-heading">
+          <div><p class="eyebrow">PREFERENCES</p><h1>Settings</h1><p class="page-description">Customize the workspace identity and regional preferences.</p></div>
+        </section>
+        <form class="settings-layout" id="settings-form">
+          <section class="panel settings-panel">
+            <div class="settings-section-heading"><div><h2>Business information</h2><p>These details identify your inventory workspace.</p></div></div>
+            <div class="settings-form-grid">
+              <label class="field">Application name <span class="required">*</span><input name="appName" required maxlength="60"></label>
+              <label class="field">Business name <span class="required">*</span><input name="businessName" required maxlength="100"></label>
+              <label class="field">Business email<input name="businessEmail" type="email" maxlength="120"></label>
+              <label class="field">Business phone<input name="businessPhone" type="tel" maxlength="40"></label>
+              <label class="field field-span-2">Business address<textarea name="businessAddress" rows="3" maxlength="240"></textarea></label>
+              <label class="field field-span-2">Business logo URL or relative path<input name="businessLogo" type="text" placeholder="https://..."></label>
+            </div>
+          </section>
+          <section class="panel settings-panel">
+            <div class="settings-section-heading"><div><h2>Appearance and region</h2><p>Choose the primary color and currency used throughout the app.</p></div></div>
+            <div class="settings-form-grid">
+              <label class="field">Primary theme color <span class="required">*</span><div class="color-input"><input name="primaryColor" type="color" required><span id="color-value">#635bff</span></div></label>
+              <label class="field">Currency <span class="required">*</span><select name="currency" required><option value="USD">US Dollar (USD)</option><option value="EUR">Euro (EUR)</option><option value="GBP">British Pound (GBP)</option><option value="CAD">Canadian Dollar (CAD)</option><option value="AUD">Australian Dollar (AUD)</option><option value="JPY">Japanese Yen (JPY)</option><option value="INR">Indian Rupee (INR)</option></select></label>
+            </div>
+          </section>
+          <div class="settings-actions"><span class="settings-saved" id="settings-saved" role="status"></span><button class="button button-primary" type="submit">Save changes</button></div>
+        </form>
+      </main>
+      {{> footer pageScript="settings"}}
+    </div>
+  </div>
+  <div class="sidebar-backdrop" data-sidebar-close></div>
+</body>
+</html>
